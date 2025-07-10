@@ -38,7 +38,7 @@
       color: white;
     }
     header input[type="radio"] {
-        display: none;
+      display: none;
     }
     section {
       display: none;
@@ -68,6 +68,11 @@
       width: 200px;
       border-radius: 10px;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      transition: box-shadow 0.3s ease;
+    }
+    .pelicula img:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
     }
     .pelicula p {
       margin-top: 8px;
@@ -178,9 +183,9 @@
           <p>Shadow Force : Sentencia De Muerte</p>
         </div>
         <div class="pelicula">
-            <img src="pinguino.jpg">
-            <p>Lecciones de un pingüino</p>
-          </div>
+          <img src="pinguino.jpg">
+          <p>Lecciones de un pingüino</p>
+        </div>
       </div>
     </section>
 
@@ -204,9 +209,9 @@
           <p>Cómo entrenar a tu dragón</p>
         </label>
         <label for="pel5" class="pelicula">
-            <img src="cuadrilatero.jpg">
-            <p>Cuadrilátero</p>
-          </label>
+          <img src="cuadrilatero.jpg">
+          <p>Cuadrilátero</p>
+        </label>
       </div>
     </section>
 
@@ -224,7 +229,7 @@
       <div>
         <h2>Shadow Force: Sentencia de Muerte</h2>
         <p><strong>Duración:</strong> 1hr 45min | <strong>Género:</strong> Acción / Suspenso</p>
-        <p><strong>Sinopsis:</strong>Kyrah (Kerry Washington) e Isaac (Omar Sy) alguna vez fueron los líderes de un grupo de fuerzas especiales multinacional llamado Shadow Force. Rompieron las reglas al enamorarse y, para proteger a su hijo, tuvieron que esconderse. Con una gran recompensa por sus cabezas y la vengativa Shadow Force pisándoles los talones, la lucha por salvar a su familia se convierte en una guerra.</p>
+        <p><strong>Sinopsis:</strong> Kyrah (Kerry Washington) e Isaac (Omar Sy) alguna vez fueron los líderes de un grupo de fuerzas especiales multinacional llamado Shadow Force. Rompieron las reglas al enamorarse y, para proteger a su hijo, tuvieron que esconderse. Con una gran recompensa por sus cabezas y la vengativa Shadow Force pisándoles los talones, la lucha por salvar a su familia se convierte en una guerra.</p>
         <iframe width="100%" height="300" src="https://www.youtube.com/embed/M7LhGytiHFM" allowfullscreen></iframe>
         <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
       </div>
@@ -234,7 +239,7 @@
       <div>
         <h2>Lecciones de un pingüino</h2>
         <p><strong>Duración:</strong> 1hr 54min | <strong>Género:</strong> Comedia</p>
-        <p><strong>Sinopsis:</strong>Sigue la historia de un inglés decepcionado tras ir a trabajar a una escuela en Argentina, pero su vida cambia después de encontrar a un pequeño pingüino que se convierte en su amigo y maestro de las lecciones más importantes de la vida.</p>
+        <p><strong>Sinopsis:</strong> Sigue la historia de un inglés decepcionado tras ir a trabajar a una escuela en Argentina, pero su vida cambia después de encontrar a un pequeño pingüino que se convierte en su amigo y maestro de las lecciones más importantes de la vida.</p>
         <iframe width="100%" height="300" src="https://www.youtube.com/embed/J_YTFe5Vy-Y" allowfullscreen></iframe>
         <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
       </div>
@@ -251,14 +256,14 @@
     </section>
 
     <section id="reseña5" class="reseña">
-        <div>
-          <h2>Cuadrilátero</h2>
-          <p><strong>Duración:</strong> 1hr 25min | <strong>Género:</strong> Suspenso</p>
-          <p><strong>Sinopsis:</strong> Adriana vive una meticulosa rutina con su esposo y sus dos hijos, hasta que un nuevo embarazo perturba el delicado equilibrio. Los cinco miembros de la familia se ven envueltos en un macabro juego de las sillas para asegurar uno de los cuatro espacios.</p>
-          <iframe width="100%" height="300" src="https://www.youtube.com/embed/1wM2VNUKhro" allowfullscreen></iframe>
-          <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
-        </div>
-      </section>
+      <div>
+        <h2>Cuadrilátero</h2>
+        <p><strong>Duración:</strong> 1hr 25min | <strong>Género:</strong> Suspenso</p>
+        <p><strong>Sinopsis:</strong> Adriana vive una meticulosa rutina con su esposo y sus dos hijos, hasta que un nuevo embarazo perturba el delicado equilibrio. Los cinco miembros de la familia se ven envueltos en un macabro juego de las sillas para asegurar uno de los cuatro espacios.</p>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/1wM2VNUKhro" allowfullscreen></iframe>
+        <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
+      </div>
+    </section>
 
     <section id="seccion-combos">
       <h2>🍿 Combos disponibles</h2>
@@ -279,42 +284,42 @@
     </section>
 
     <section id="seccion-encuesta">
-        <h2>📝 Encuesta de Opinión</h2>
-        <form>
-          <label>1. ¿Con qué frecuencia vas al cine?</label><br>
-          <label><input type="radio" name="frecuencia" value="semanal"> Semanal</label><br>
-          <label><input type="radio" name="frecuencia" value="mensual"> Mensual</label><br>
-          <label><input type="radio" name="frecuencia" value="ocasional"> Ocasional</label><br><br>
-      
-          <label>2. Género favorito:</label>
-          <select>
-            <option>Acción</option>
-            <option>Comedia</option>
-            <option>Terror</option>
-            <option>Romance</option>
-          </select><br><br>
-      
-          <label>3. ¿Qué tan cómodas son las salas?</label><br>
-          <input type="range" min="1" max="5"><br><br>
-      
-          <label>4. ¿Prefieres comprar entradas online?</label><br>
-          <label><input type="radio" name="online" value="si"> Sí</label>
-          <label><input type="radio" name="online" value="no"> No</label><br><br>
-      
-          <label>5. ¿Precios de combos?</label><br>
-          <label><input type="radio" name="precio" value="razonables"> Razonables</label>
-          <label><input type="radio" name="precio" value="caros"> Caros</label><br><br>
-      
-          <label>6. ¿Qué mejorarías?</label><br>
-          <textarea rows="4"></textarea><br><br>
-      
-          <label>7. ¿Recomendarías nuestro cine?</label><br>
-          <label><input type="radio" name="recomendar" value="si"> Sí</label>
-          <label><input type="radio" name="recomendar" value="no"> No</label><br><br>
-      
-          <input type="submit" value="Enviar">
-        </form>
-      </section>      
+      <h2>📝 Encuesta de Opinión</h2>
+      <form>
+        <label>1. ¿Con qué frecuencia vas al cine?</label><br>
+        <label><input type="radio" name="frecuencia" value="semanal"> Semanal</label><br>
+        <label><input type="radio" name="frecuencia" value="mensual"> Mensual</label><br>
+        <label><input type="radio" name="frecuencia" value="ocasional"> Ocasional</label><br><br>
+    
+        <label>2. Género favorito:</label>
+        <select>
+          <option>Acción</option>
+          <option>Comedia</option>
+          <option>Terror</option>
+          <option>Romance</option>
+        </select><br><br>
+    
+        <label>3. ¿Qué tan cómodas son las salas?</label><br>
+        <input type="range" min="1" max="5"><br><br>
+    
+        <label>4. ¿Prefieres comprar entradas online?</label><br>
+        <label><input type="radio" name="online" value="si"> Sí</label>
+        <label><input type="radio" name="online" value="no"> No</label><br><br>
+    
+        <label>5. ¿Precios de combos?</label><br>
+        <label><input type="radio" name="precio" value="razonables"> Razonables</label>
+        <label><input type="radio" name="precio" value="caros"> Caros</label><br><br>
+    
+        <label>6. ¿Qué mejorarías?</label><br>
+        <textarea rows="4"></textarea><br><br>
+    
+        <label>7. ¿Recomendarías nuestro cine?</label><br>
+        <label><input type="radio" name="recomendar" value="si"> Sí</label>
+        <label><input type="radio" name="recomendar" value="no"> No</label><br><br>
+    
+        <input type="submit" value="Enviar">
+      </form>
+    </section>      
 
     <footer>
       <p>&copy; 2025 Cinepolis. Todos los derechos reservados.</p>
