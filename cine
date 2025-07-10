@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cinepolis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      margin: 0;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e1e1e;
+      padding: 10px 20px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      width: 40px;
+      height: 40px;
+    }
+    .logo span {
+      color: #eff300;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    nav label {
+      margin-left: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+    }
+    header input[type="radio"] {
+        display: none;
+    }
+    section {
+      display: none;
+      padding: 30px;
+    }
+    #inicio:checked ~ .contenedor #seccion-inicio,
+    #cartelera:checked ~ .contenedor #seccion-cartelera,
+    #combos:checked ~ .contenedor #seccion-combos,
+    #encuesta:checked ~ .contenedor #seccion-encuesta,
+    #pel1:checked ~ .contenedor #reseña1,
+    #pel2:checked ~ .contenedor #reseña2,
+    #pel3:checked ~ .contenedor #reseña3,
+    #pel4:checked ~ .contenedor #reseña4, 
+    #pel5:checked ~ .contenedor #reseña5 {
+      display: block;
+    }
+    .peliculas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .pelicula {
+      text-align: center;
+    }
+    .pelicula img {
+      width: 200px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .pelicula p {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    .reseña {
+      display: none;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .reseña iframe {
+      border-radius: 10px;
+      width: 100%;
+      max-width: 500px;
+    }
+    .volver {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f44336;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .combo {
+      background-color: #2e2e2e;
+      padding: 10px;
+      border-radius: 10px;
+      width: 200px;
+      text-align: center;
+    }
+    .combo img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    form {
+      background-color: #2e2e2e;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+    }
+    form label {
+      font-weight: bold;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      margin: 5px 0 15px;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    form input[type="submit"] {
+      background-color: #f44336;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1e1e1e;
+      color: #ccc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <input type="radio" name="seccion" id="inicio" checked>
+  <input type="radio" name="seccion" id="cartelera">
+  <input type="radio" name="seccion" id="combos">
+  <input type="radio" name="seccion" id="encuesta">
+  <input type="radio" name="seccion" id="pel1">
+  <input type="radio" name="seccion" id="pel2">
+  <input type="radio" name="seccion" id="pel3">
+  <input type="radio" name="seccion" id="pel4">
+  <input type="radio" name="seccion" id="pel5">
+
+  <div class="contenedor">
+    <header>
+      <div class="logo">
+        <img src="imagen/cine.jpg">
+        <span>Cinepolis</span>
+      </div>
+      <nav>
+        <label for="inicio">Inicio</label>
+        <label for="cartelera">Cartelera</label>
+        <label for="combos">Combos</label>
+        <label for="encuesta">Encuesta</label>
+      </nav>
+    </header>
+
+    <section id="seccion-inicio">
+      <h2>🎥 Estrenos recientes</h2>
+      <div class="peliculas">
+        <div class="pelicula">
+          <img src="imagen/superman.jpg">
+          <p>Superman</p>
+        </div>
+        <div class="pelicula">
+          <img src="imagen/shadow.jpg">
+          <p>Shadow Force : Sentencia De Muerte</p>
+        </div>
+        <div class="pelicula">
+            <img src="imagen/pinguino.jpg">
+            <p>Lecciones de un pingüino</p>
+          </div>
+      </div>
+    </section>
+
+    <section id="seccion-cartelera">
+      <h2>🎬 Cartelera</h2>
+      <div class="peliculas">
+        <label for="pel1" class="pelicula">
+          <img src="imagen/superman.jpg">
+          <p>Superman</p>
+        </label>
+        <label for="pel2" class="pelicula">
+          <img src="imagen/shadow.jpg">
+          <p>Shadow Force : Sentencia De Muerte</p>
+        </label>
+        <label for="pel3" class="pelicula">
+          <img src="imagen/pinguino.jpg">
+          <p>Lecciones de un pingüino</p>
+        </label>
+        <label for="pel4" class="pelicula">
+          <img src="imagen/dragon.jpg">
+          <p>Cómo entrenar a tu dragón</p>
+        </label>
+        <label for="pel5" class="pelicula">
+            <img src="imagen/cuadrilatero.jpg">
+            <p>Cuadrilátero</p>
+          </label>
+      </div>
+    </section>
+
+    <section id="reseña1" class="reseña">
+      <div>
+        <h2>Superman</h2>
+        <p><strong>Duración:</strong> 2hrs 10min | <strong>Género:</strong> Acción/Ciencia Ficción</p>
+        <p><strong>Sinopsis:</strong> En su estilo característico, James Gunn asume el papel del superhéroe original en el nuevo universo de DC, con una singular mezcla de acción épica, humor y corazón, ofreciendo un Superman impulsado por la compasión y una creencia inherente en la bondad de la humanidad.</p>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/Ox8ZLF6cGM0" allowfullscreen></iframe>
+        <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
+      </div>
+    </section>
+
+    <section id="reseña2" class="reseña">
+      <div>
+        <h2>Shadow Force: Sentencia de Muerte</h2>
+        <p><strong>Duración:</strong> 1hr 45min | <strong>Género:</strong> Acción / Suspenso</p>
+        <p><strong>Sinopsis:</strong>Kyrah (Kerry Washington) e Isaac (Omar Sy) alguna vez fueron los líderes de un grupo de fuerzas especiales multinacional llamado Shadow Force. Rompieron las reglas al enamorarse y, para proteger a su hijo, tuvieron que esconderse. Con una gran recompensa por sus cabezas y la vengativa Shadow Force pisándoles los talones, la lucha por salvar a su familia se convierte en una guerra.</p>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/M7LhGytiHFM" allowfullscreen></iframe>
+        <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
+      </div>
+    </section>
+
+    <section id="reseña3" class="reseña">
+      <div>
+        <h2>Lecciones de un pingüino</h2>
+        <p><strong>Duración:</strong> 1hr 54min | <strong>Género:</strong> Comedia</p>
+        <p><strong>Sinopsis:</strong>Sigue la historia de un inglés decepcionado tras ir a trabajar a una escuela en Argentina, pero su vida cambia después de encontrar a un pequeño pingüino que se convierte en su amigo y maestro de las lecciones más importantes de la vida.</p>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/J_YTFe5Vy-Y" allowfullscreen></iframe>
+        <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
+      </div>
+    </section>
+
+    <section id="reseña4" class="reseña">
+      <div>
+        <h2>Cómo entrenar a tu dragón</h2>
+        <p><strong>Duración:</strong> 1hr 56min | <strong>Género:</strong> Familiar</p>
+        <p><strong>Sinopsis:</strong> En la isla de Berk, donde los vikingos y los dragones han sido enemigos por generaciones, Hipo se distingue. El ingenioso, pero olvidado, hijo del Jefe Estoico el Vasto, Hipo desafía siglos de tradición cuando hace amistad con Chimuelo, el temido dragón Furia Nocturna. Su vínculo inusual revela la verdadera naturaleza de los dragones, retando las fundaciones de la sociedad vikinga.</p>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/22w7z_lT6YM" allowfullscreen></iframe>
+        <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
+      </div>
+    </section>
+
+    <section id="reseña5" class="reseña">
+        <div>
+          <h2>Cuadrilátero</h2>
+          <p><strong>Duración:</strong> 1hr 25min | <strong>Género:</strong> Suspenso</p>
+          <p><strong>Sinopsis:</strong> Adriana vive una meticulosa rutina con su esposo y sus dos hijos, hasta que un nuevo embarazo perturba el delicado equilibrio. Los cinco miembros de la familia se ven envueltos en un macabro juego de las sillas para asegurar uno de los cuatro espacios.</p>
+          <iframe width="100%" height="300" src="https://www.youtube.com/embed/1wM2VNUKhro" allowfullscreen></iframe>
+          <br><label for="cartelera" class="volver">← Volver a Cartelera</label>
+        </div>
+      </section>
+
+    <section id="seccion-combos">
+      <h2>🍿 Combos disponibles</h2>
+      <div class="peliculas">
+        <div class="combo">
+          <img src="imagen/combo1.jpg">
+          <p>Cancha grande + Gaseosa</p>
+        </div>
+        <div class="combo">
+          <img src="imagen/combo2.jpg">
+          <p>Nachos + Gaseosa</p>
+        </div>
+        <div class="combo">
+          <img src="imagen/combo3.jpg">
+          <p>Hotdog + Cancha + 2 gaseosas</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="seccion-encuesta">
+        <h2>📝 Encuesta de Opinión</h2>
+        <form>
+          <label>1. ¿Con qué frecuencia vas al cine?</label><br>
+          <label><input type="radio" name="frecuencia" value="semanal"> Semanal</label><br>
+          <label><input type="radio" name="frecuencia" value="mensual"> Mensual</label><br>
+          <label><input type="radio" name="frecuencia" value="ocasional"> Ocasional</label><br><br>
+      
+          <label>2. Género favorito:</label>
+          <select>
+            <option>Acción</option>
+            <option>Comedia</option>
+            <option>Terror</option>
+            <option>Romance</option>
+          </select><br><br>
+      
+          <label>3. ¿Qué tan cómodas son las salas?</label><br>
+          <input type="range" min="1" max="5"><br><br>
+      
+          <label>4. ¿Prefieres comprar entradas online?</label><br>
+          <label><input type="radio" name="online" value="si"> Sí</label>
+          <label><input type="radio" name="online" value="no"> No</label><br><br>
+      
+          <label>5. ¿Precios de combos?</label><br>
+          <label><input type="radio" name="precio" value="razonables"> Razonables</label>
+          <label><input type="radio" name="precio" value="caros"> Caros</label><br><br>
+      
+          <label>6. ¿Qué mejorarías?</label><br>
+          <textarea rows="4"></textarea><br><br>
+      
+          <label>7. ¿Recomendarías nuestro cine?</label><br>
+          <label><input type="radio" name="recomendar" value="si"> Sí</label>
+          <label><input type="radio" name="recomendar" value="no"> No</label><br><br>
+      
+          <input type="submit" value="Enviar">
+        </form>
+      </section>      
+
+    <footer>
+      <p>&copy; 2025 Cinepolis. Todos los derechos reservados.</p>
+      <p>Elaborado por Brianda Vasquez Rojas - Proyecto de práctica calificada</p>
+    </footer>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
